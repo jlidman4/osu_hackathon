@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hawaii40 Power Grid</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Hawaii40 Synthetic Grid</h1>
+
+    <div id="controls">
+        <label>Temperature (°C): <input type="number" id="Ta" value="25"></label>
+        <label>Wind Velocity (ft/s): <input type="number" id="WindVelocity" value="2"></label>
+        <label>Sun Time (0-24): <input type="number" id="SunTime" value="12"></label>
+        <button id="updateBtn">Update Grid</button>
+    </div>
+
+    <div id="map"></div>
+
+    <div id="table-container">
+        <h2>Line Loading Table</h2>
+        <table id="lineTable">
+            <thead>
+                <tr>
+                    <th>Line</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Load (%)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="/interactiveMap.js"></script>
+</body>
+</html>
